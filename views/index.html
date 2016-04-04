@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+        <script src="https:ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="index.js"></script>
+    </head>
+    <body ng-app="myApp" ng-controller="mainController">
+        <header>
+            <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-brand">Order Management</div>
+                <a class="btn btn-default navbar-btn navbar-right" href="#create" role="button" ng-click="createUser()">Create New Order</a>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#/">Order List</a></li>                 
+                </ul>
+            </div>
+            </nav>
+        </header>  
+        <div id="main">
+            <div ng-view></div>
+        </div>       
+    </body>
+</html>

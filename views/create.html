@@ -1,0 +1,51 @@
+<div class="container" ng-controller="createController">
+    <div class="row">
+        <div class="col-md-7 col-md-offset-2">
+            <form ng-submit="submit()">
+                <div class="form-group">
+                    <label>Product Name</label>
+                    <input type="text"  class="form-control" ng-model="fName" placeholder="Product Name">
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" class="form-control" ng-model="lName" placeholder="Category">
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <input type="text" class="form-control" ng-model="title" placeholder="Status">                    
+                </div>
+                <!--<div class="form-group form-horizontal">
+                    <label class="control-label">Sex</label>
+                    <div>
+                        <label class="radio-inline"> 
+                            <input type="radio"> Male
+                        </label>
+                        <label class="checkbox-inline">    
+                            <input type="radio"> Female
+                        </label>
+                    </div>    
+                </div>-->
+                <div class="form-group">
+                    <label>Price</label>
+                    <input type="text" class="form-control" ng-model="sex" placeholder="Price">                       
+                </div>
+                <div class="form-group">
+                    <label>Quantity</label>
+                    <input type="number" class="form-control" ng-model="age" placeholder="Quantity">                       
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" ng-model="passw1" placeholder="Password">                       
+                </div>
+                <div class="form-group">
+                    <label>Repeat</label>
+                    <input type="password" class="form-control" ng-model="passw2" placeholder="Repeat Password">                    
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" ng-disabled="error || incomplete"> Save Changes</button>
+                    </div>
+                </div>                                 
+            </form>
+        </div>
+    </div>
+</div> 

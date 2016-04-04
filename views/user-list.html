@@ -1,0 +1,32 @@
+<div class="container" ng-controller="mainController">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-striped table-responsive">
+                <tr>
+                    <th ng-click="orderBy('fName')"><i class="fa fa-fw fa-sort"></i>Product Name</th>
+                    <th ng-click="orderBy('lName')"><i class="fa fa-fw fa-sort"></i>Category</th>
+                    <th ng-click="orderBy('title')"><i class="fa fa-fw fa-sort"></i>Status</th>
+                    <th ng-click="orderBy('sex')"><i class="fa fa-fw fa-sort"></i>Price</th>
+                    <th ng-click="orderBy('age')"><i class="fa fa-fw fa-sort"></i>Quantity</th>
+                    <th>Edit</th>
+                    <th>Delete</th>                     
+                </tr>
+                <tr ng-repeat="user in users | pagination: currentPage * itemsEachPage | limitTo : itemsEachPage | orderBy:orderByUsers">  
+                    <td>{{ user.fName }}</td>
+                    <td>{{ user.lName }}</td>
+                    <td>{{ user.title }}</td>
+                    <td>{{ user.sex }}</td>
+                    <td>{{ user.age }}</td>
+                    <td><a class="btn btn-primary" href="#create" role="button" ng-click="editUser(user.id)">Edit</a></td>
+                    <td><a class="btn btn-danger" href="#/" role="button" ng-click="deleteUser(user.id)">Delete</a></td>  
+                                        
+                </tr>
+            </table>
+            <div class="col-md-offset-4">
+                <button class="btn btn-default" ng-disabled="currentPage == 0" ng-click="currentPage = currentPage - 1">Previous</button>
+                <button class="btn btn-default" ng-disabled="true">page {{currentPage + 1}} of {{numberOfPage()}}</button>
+                <button class="btn btn-default" ng-disabled="currentPage == numberOfPage()-1" ng-click="currentPage = currentPage + 1">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
